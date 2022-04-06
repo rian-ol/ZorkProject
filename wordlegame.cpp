@@ -32,7 +32,7 @@ int main()
         
        
     }
-    if (guessCount==4)
+    if (guessCount==MaxGuess && guess!=answer)
     {
         std::cout <<std::endl;
         std::cout<<"You have run out of guesses"<<std::endl;
@@ -58,7 +58,7 @@ bool isString(std::string word){
 void CheckCorrect(std::string word){
     guessCount++;
     whileCounter =0;
-    std::string correctLetters= "The correct letters from this guess are: ";
+    std::string correctLetters= "The correct letter(s) from this guess are: ";
     if(word == answer){ 
       std::cout<<"Correct answer!"<<std::endl;
       return;
@@ -80,7 +80,7 @@ void CheckCorrect(std::string word){
         }
     }
     //checks if there was any letters correctly guessed
-    if (correctLetters.length() == 41)
+    if (correctLetters.length() == 43)
     {
         correctLetters = "You didn't guess any correct letters!";
     }
@@ -90,7 +90,7 @@ void CheckCorrect(std::string word){
     std::cout<<correctLetters<<std::endl;
     
     while(guessCount<MaxGuess &&  whileCounter!=1){
-        std::cout<<"You have guessed "<<guessCount<<" times. You have "<< MaxGuess-guessCount<< " guesses left."<< std::endl;
+        std::cout<<"You have guessed "<<guessCount<<" time(s). You have "<< MaxGuess-guessCount<< " guesse(s) left."<< std::endl;
         whileCounter = 1;
     }
     
