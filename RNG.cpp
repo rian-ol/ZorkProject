@@ -1,26 +1,23 @@
 //random number generator for puzzle room.
+#include "RNG.h"
 
-#include <iostream>
-#include <ctime>
-#include <string>
-std::string guess;
-std::string answer;
-int guessCount = 0;
 
-bool checkInt(std::string);
-void checkAns(std::string);
-void createAns();
+ 
+
 
 int main(){
-    createAns();
+    guessCount=0;
+    //RNGgameCount =1;
+    RNGclass myRNG;
+    myRNG.createAns();
     
        while(guessCount!=5 && guess!=answer){
             std::cout << "Please enter a random number"<<std::endl;
             std::cin>>guess;
         
-         if (checkInt(guess))
+         if (myRNG.checkInt(guess))
             {
-                checkAns(guess);
+                myRNG.checkAns(guess);
             }else{
             std::cout << "Please enter a valid number"<<std::endl;
              }
