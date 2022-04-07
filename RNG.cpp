@@ -5,9 +5,9 @@
  
 
 
-int main(){
+int RNG(){
     guessCount=0;
-    //RNGgameCount =1;
+    RNGgameCount =1;
     RNGclass myRNG;
     myRNG.createAns();
     

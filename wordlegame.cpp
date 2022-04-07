@@ -1,20 +1,14 @@
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <ctime>
+#include "wordlegame.h"
 
 const int MaxGuess = 5;
-void CheckCorrect(std::string);
-void PickWord();
-bool isString(std::string);
 int guessCount=0;
 std::string answer= "";
 int whileCounter= 0;
 
 
-int main()
+int wordlegame()
 {
-    
+    //wordlegameCount =1;
     std::string guess= "";
     
     PickWord();
