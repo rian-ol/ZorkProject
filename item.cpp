@@ -1,6 +1,6 @@
 #include "item.h"
 
-Item::Item (string inDescription, int inWeightGrams, float inValue/**, int weaponCheck*/) {
+Item::Item (string inDescription, int inWeightGrams,int damage, float inValue/**, int weaponCheck*/) {
     description = inDescription;
     setWeight(inWeightGrams);
     value = inValue;
@@ -17,6 +17,10 @@ void Item::setWeight(int inWeightGrams)
        cout << "weight invalid, must be 0<weight<9999" ;
     else
        weightGrams = inWeightGrams;
+}
+
+int Item::getWeight(){
+    return this->weightGrams;
 }
 
 void Item::setValue(float inValue)
