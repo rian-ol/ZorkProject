@@ -67,12 +67,3 @@ void createAns(){
     answer = std::to_string(answerInt);
     // std::cout << answer << std::endl;
 }
-
-
-
-void createAns(){
-  srand((unsigned) time(0));
-    int answerInt = ((rand()%10)+1); 
-    answer = std::to_string(answerInt);
-    // std::cout << answer << std::endl;
-}
