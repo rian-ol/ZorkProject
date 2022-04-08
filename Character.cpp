@@ -4,13 +4,21 @@ Character::Character(string description, int health) {
     this->description = description;
     this->currentHealth = health;
 }
-void Character::addItems(Item &item) {
+void Character::addItems(Item *item) {
     itemsInCharacter.push_back(item);
 }
-void Character::addItems(Item *item) {
+void Character::dropItems(Item *item) {
     itemsInCharacter.push_back(*item);
     delete item;
 }
+
+int Character::getTotalWeight(){
+    int totalWeight;
+    for(int i=0; i<itemsInCharacter.size();i++){
+        totalWeight += itemsInCharacter.at(i).getWeight();
+    }
+}
+
 string Character::longDescription()
 {
   string ret = this->description;
