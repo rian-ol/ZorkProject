@@ -1,21 +1,11 @@
-// #include "wordlegame.cpp"
-// //#include "RNG.cpp"
-// //#include "commands.cpp"
-// #include "common.h"
+#include "mainwindow.h"
 
-// int main(){
-//     wordlegameCount =0;
-//    // RNGgameCount =0;
+#include <QApplication>
 
-//     if (wordlegameCount==0)
-//     {
-//         wordlegame();
-//     }
-//     // if (RNGgameCount==0)
-//     // {
-//     //     RNG();
-//     // }
-    
-    
-//     return 0;
-// }
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();
+}
