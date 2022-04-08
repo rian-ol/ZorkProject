@@ -47,6 +47,11 @@ void Room::addItem(Item *inItem) {
     itemsInRoom.push_back(*inItem);
 }
 
+void Room::addMonster(monster *monster){
+    monsters.push_back(*monster);
+}
+
+
 string Room::displayItem() {
     string tempString = "items in room = ";
     int sizeItems = (itemsInRoom.size());
